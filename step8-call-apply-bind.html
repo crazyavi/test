@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let hero1 = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            fullname : function(){
+                return this.firstname+" "+this.lastname
+            }
+        }
+        let hero2 = {
+            title : "Spiderman",
+            firstname : "Peter",
+            lastname : "Parker"
+        };
+        let hero3 = {
+            title : "Captain America",
+            firstname : "Steve",
+            lastname : "Rogers"
+        };
+        console.log(hero1.fullname());//
+        console.log(hero1.fullname.call(hero2));//
+        console.log(hero1.fullname.apply(hero3));//
+        var hero = hero1.fullname.bind(hero3);
+        console.log(hero());//
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
